@@ -59,6 +59,7 @@ def simulate_experiment(nTrials, trial_length, type_plot):
 	sns.set_style("darkgrid")
 	ax = sns.lineplot(data=dt[0, :])
 	ax.set_title('Before learning')
+	ax.set(xlabel='Timestep', ylabel='TD error')
 	plt.plot()
 	file_name = 'before_learning'
 	plt.savefig(os.path.join(results_path, file_name + '.png'))
@@ -67,6 +68,7 @@ def simulate_experiment(nTrials, trial_length, type_plot):
 	ax = sns.lineplot(data=dt[-2, :])
 	title = 'After learning (' + str(nTrials) + ' trials)'
 	ax.set_title(title)
+	ax.set(xlabel='Timestep', ylabel='TD error')
 	plt.plot()
 	file_name = 'after_learning_' + str(nTrials)
 	plt.savefig(os.path.join(results_path, file_name + '.png'))	
@@ -78,6 +80,7 @@ def simulate_experiment(nTrials, trial_length, type_plot):
 		ax = sns.lineplot(data=dt[-1, :])
 		title = 'Reward omission (' + str(nTrials) + ' trials)'
 		ax.set_title(title)
+		ax.set(xlabel='Timestep', ylabel='TD error')
 		plt.plot()
 		file_name = 'reward_omission_' + str(nTrials)
 		plt.savefig(os.path.join(results_path, file_name + '.png'))
@@ -87,6 +90,7 @@ def simulate_experiment(nTrials, trial_length, type_plot):
 		ax = sns.lineplot(data=dt[-1, :])
 		title = 'Early reward (' + str(nTrials) + ' trials)'
 		ax.set_title(title)
+		ax.set(xlabel='Timestep', ylabel='TD error')
 		plt.plot()
 		file_name = 'early_reward_' + str(nTrials)
 		plt.savefig(os.path.join(results_path, file_name + '.png'))
@@ -96,6 +100,7 @@ def simulate_experiment(nTrials, trial_length, type_plot):
 		ax = sns.lineplot(data=dt[-1, :])
 		title = 'Delayed reward (' + str(nTrials) + ' trials)'
 		ax.set_title(title)
+		ax.set(xlabel='Timestep', ylabel='TD error')
 		plt.plot()
 		file_name = 'delayed_reward_' + str(nTrials)
 		plt.savefig(os.path.join(results_path, file_name + '.png'))
@@ -107,6 +112,6 @@ def simulate_experiment(nTrials, trial_length, type_plot):
 	V = np.reshape(V, (trial_length, nTrials + 1), order="F").T
 
 
-simulate_experiment(5, 10, 'or')
-simulate_experiment(5, 10, 'er') 
-simulate_experiment(5, 10, 'dr')
+simulate_experiment(100, 10, 'or')
+simulate_experiment(100, 10, 'er') 
+simulate_experiment(100, 10, 'dr')

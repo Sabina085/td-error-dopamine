@@ -2,6 +2,9 @@
 A Python implementation for simulating some of the TD learning experiments from the paper "A neural substrate of prediction and reward"  (Schultz, W., Dayan, P., Montague, R.P)
 
 The code is based on the MATLAB implementation from https://github.com/sjgershm/RL-tutorial.
+
+<hr>
+
 <p> Before learning </p>
 <p>
   <img src="Results/before_learning.png" width="300" height="200" />

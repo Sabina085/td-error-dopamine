@@ -1,5 +1,5 @@
 # td-error-dopamine
-A Python implementation for simulating some of the TD learning experiments from the paper "A neural substrate of prediction and reward"  (Schultz, W., Dayan, P., Montague, R.P)
+A Python implementation for simulating some of the TD learning experiments from the paper "A neural substrate of prediction and reward"  (Schultz, W., Dayan, P., Montague, R.P) [[1]](#1)
 
 The code is based on the MATLAB implementation from https://github.com/sjgershm/RL-tutorial.
 
@@ -56,6 +56,16 @@ The code is based on the MATLAB implementation from https://github.com/sjgershm/
 </p>
 
 <hr>
+
+## References
+<a id="1">[1]</a> 
+Schultz, W., Dayan, P., Montague, R.P.: A neural substrate of prediction and reward. Science 275, 1593–1599 (1997)
+
+<a id="2">[2]</a> 
+Sutton, R.S., Barto, A.G.: Reinforcement Learning: An Introduction. A Bradford
+Book, Cambridge, MA, USA (2018)
+
+
 
 
 
